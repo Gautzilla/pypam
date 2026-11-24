@@ -14,14 +14,14 @@ plt.rcParams.update(plt.rcParamsDefault)
 test_dir = os.path.dirname(__file__)
 
 # Data information
-folder_path = pathlib.Path(f"{test_dir}/test_data")
+folder_path = pathlib.Path(f"test_data")
 
 # Hydrophone Setup
 # If Vpp is 2.0 then it means the wav is -1 to 1 directly related to V
 model = "ST300HF"
 name = "SoundTrap"
 serial_number = 67416073
-calibration_file = pathlib.Path(f"{test_dir}/test_data/calibration_data.xlsx")
+calibration_file = pathlib.Path(f"test_data/calibration_data.xlsx")
 soundtrap = pyhy.soundtrap.SoundTrap(
     name=name,
     model=model,

@@ -16,7 +16,7 @@ import matplotlib.pyplot as plt
 from tests import skip_unless_with_plots
 
 test_dir = os.path.dirname(__file__)
-pile_driving_dir = pathlib.Path(f"{test_dir}/test_data/impulsive_data")
+pile_driving_dir = pathlib.Path(f"test_data/impulsive_data")
 plt.rcParams.update(plt.rcParamsDefault)
 
 name = "AMAR 1"

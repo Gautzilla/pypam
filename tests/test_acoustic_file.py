@@ -18,7 +18,7 @@ test_dir = os.path.dirname(__file__)
 model = "ST300HF"
 name = "SoundTrap"
 serial_number = 67416073
-calibration_file = pathlib.Path(f"{test_dir}/test_data/calibration_data.xlsx")
+calibration_file = pathlib.Path(f"test_data/calibration_data.xlsx")
 soundtrap = pyhy.soundtrap.SoundTrap(
     name=name,
     model=model,
@@ -34,10 +34,10 @@ soundtrap = pyhy.soundtrap.SoundTrap(
 class TestAcuFile(unittest.TestCase):
     def setUp(self) -> None:
         self.acu_file = AcuFile(
-            f"{test_dir}/test_data/67416073.210610033655.wav", soundtrap, 1
+            f"test_data/67416073.210610033655.wav", soundtrap, 1
         )
         self.acu_file_gridded = AcuFile(
-            f"{test_dir}/test_data/67416073.210610033655.wav",
+            f"test_data/67416073.210610033655.wav",
             soundtrap,
             1,
             gridded=True,

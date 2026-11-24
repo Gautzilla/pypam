@@ -29,7 +29,7 @@ def millidecade_bands():
     method = "density"
     band = [0, 4000]
 
-    wav_path = f"{test_dir}/test_data/67416073.210610033655.wav"
+    wav_path = f"test_data/67416073.210610033655.wav"
     acu_file = AcuFile(
         sfile=wav_path,
         hydrophone=soundtrap,

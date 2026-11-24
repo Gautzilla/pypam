@@ -20,7 +20,7 @@ test_dir = os.path.dirname(__file__)
 plt.rcParams.update(plt.rcParamsDefault)
 
 # Data information
-folder_path = pathlib.Path(f"{test_dir}/test_data")
+folder_path = pathlib.Path(f"test_data")
 
 # Hydrophone Setup
 # If Vpp is 2.0 then it means the wav is -1 to 1 directly related to V
@@ -41,10 +41,10 @@ zipped_files = False
 
 class TestPlots(unittest.TestCase):
     def setUp(self) -> None:
-        self.ds = xarray.open_dataset(f"{test_dir}/test_data/test_day.nc")
+        self.ds = xarray.open_dataset(f"test_data/test_day.nc")
         self.ds = self.ds.where(self.ds.frequency_bins > 10, drop=True)
         self.acu_file = AcuFile(
-            f"{test_dir}/test_data/67416073.210610033655.wav", soundtrap, 1
+            f"test_data/67416073.210610033655.wav", soundtrap, 1
         )
         self.asa = ASA(
             hydrophone=soundtrap,
@@ -112,7 +112,7 @@ class TestPlots(unittest.TestCase):
             location=[112.186, 36.713],
             show=True,
             freq_coord="frequency_bins",
-            save_path=f"{test_dir}/test_data/data_exploration/img/data_overview/"
+            save_path=f"test_data/data_exploration/img/data_overview/"
             "summary_plot_test1.png",
         )
         pypam.plots.plot_summary_dataset(
@@ -124,7 +124,7 @@ class TestPlots(unittest.TestCase):
             location=None,
             show=True,
             freq_coord="frequency_bins",
-            save_path=f"{test_dir}/test_data/data_exploration/img/data_overview/"
+            save_path=f"test_data/data_exploration/img/data_overview/"
             "summary_plot_test2.png",
         )
 

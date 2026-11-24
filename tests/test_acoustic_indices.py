@@ -18,7 +18,7 @@ soundtrap = pyhy.soundtrap.SoundTrap(
     name=name, model=model, serial_number=serial_number
 )
 acu_file = AcuFile(
-    sfile=f"{test_dir}/test_data/67416073.210610033655.wav",
+    sfile=f"test_data/67416073.210610033655.wav",
     hydrophone=soundtrap,
     p_ref=1,
 )
