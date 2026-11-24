@@ -149,7 +149,7 @@ class TestPlots(unittest.TestCase):
             mode="quantiles",
             show=True,
             datetime_coord="datetime",
-            aggregation_time="H",
+            aggregation_time="h",
             freq_coord="frequency_bins",
             aggregation_freq_band=(100, 1000),
         )
@@ -169,7 +169,7 @@ class TestPlots(unittest.TestCase):
             mode="violin",
             show=True,
             datetime_coord="datetime",
-            aggregation_time="H",
+            aggregation_time="h",
             freq_coord="frequency_bins",
             aggregation_freq_band=1000,
         )
@@ -184,7 +184,7 @@ class TestPlots(unittest.TestCase):
             mode="quantiles",
             show=True,
             datetime_coord="datetime",
-            aggregation_time="H",
+            aggregation_time="h",
             freq_coord="frequency_bins",
             aggregation_freq_band=(100, 1000),
         )
